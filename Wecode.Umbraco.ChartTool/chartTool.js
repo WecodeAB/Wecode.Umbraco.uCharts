@@ -1,11 +1,11 @@
 ﻿
 //Globals
 var chart;
-var values;
+var settings = settings || { data: [], options: {} };
 google.load("visualization", "1", { packages: ["corechart"] });
 google.setOnLoadCallback(initChart);
 
-var array = [
+settings.data = [
             ['Year', 'Sales', 'Expenses'],
             ['2004', 1000, 400],
             ['2005', 1170, 460],
@@ -13,7 +13,7 @@ var array = [
             ['2007', 1030, 540]
         ];
 
-var options = {
+settings.options = {
     title: 'Company Performance',
     hAxis: { title: 'Year' },
     animation: { duration: 1000, easing: 'out' },
@@ -23,8 +23,8 @@ var options = {
 
 //Options methods
 var setOptions = function (myOptions, render) {
-    options = $.extend({}, options, myOptions);
-    if(render){
+    settings.options = $.extend({}, settings.options, myOptions);
+    if (render) {
         rerenderChart();
     }
 };
@@ -34,7 +34,7 @@ var determineOption = function () {
     var $this = $(this),
 		key = $this.data("key"),
 		newOption = {};
-    
+
     newOption[key] = $this.is(":checked");
 
     setOptions(newOption, true);
@@ -45,7 +45,7 @@ var rerenderChart = function () {
 };
 
 //chart methods
-var initChart = function() {
+var initChart = function () {
     chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
 };
 
@@ -54,58 +54,58 @@ var drawBarChart = function (chartTypeChanged) {
     if (chartTypeChanged == true) {
         chart = new google.visualization.BarChart(document.getElementById('chart_div'));
     }
-    var data = google.visualization.arrayToDataTable(array);
-    chart.draw(data, options);
+    var data = google.visualization.arrayToDataTable(settings.data);
+    chart.draw(data, settings.options);
 
-}
+};
 
-var drawColumnChart = function(chartTypeChanged) {
+var drawColumnChart = function (chartTypeChanged) {
 
     if (chartTypeChanged == true) {
         chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
     }
-    var data = google.visualization.arrayToDataTable(array);
-    chart.draw(data, options);
+    var data = google.visualization.arrayToDataTable(settings.data);
+    chart.draw(data, settings.options);
 
 };
 
-var drawLineChart = function(chartTypeChanged) {
+var drawLineChart = function (chartTypeChanged) {
 
     if (chartTypeChanged == true) {
         chart = new google.visualization.LineChart(document.getElementById('chart_div'));
     }
-    var data = google.visualization.arrayToDataTable(array);
+    var data = google.visualization.arrayToDataTable(settings.data);
 
-    options.curveType = "none";
-    chart.draw(data, options);
+    settings.options.curveType = "none";
+    chart.draw(data, settings.options);
 };
 
-var drawCurveChart = function(chartTypeChanged) {
+var drawCurveChart = function (chartTypeChanged) {
 
     if (chartTypeChanged == true) {
         chart = new google.visualization.LineChart(document.getElementById('chart_div'));
     }
-    var data = google.visualization.arrayToDataTable(array);
+    var data = google.visualization.arrayToDataTable(settings.data);
 
-    options.curveType = "function";
-    chart.draw(data, options);
+    settings.options.curveType = "function";
+    chart.draw(data, settings.options);
 };
 
-var drawPieChart = function(chartTypeChanged) {
+var drawPieChart = function (chartTypeChanged) {
 
     if (chartTypeChanged == true) {
         chart = new google.visualization.PieChart(document.getElementById('chart_div'));
     }
-    var data = google.visualization.arrayToDataTable(array);
-    chart.draw(data, options);
+    var data = google.visualization.arrayToDataTable(settings.data);
+    chart.draw(data, settings.options);
 
 };
 
 // helper methods
-var formatChartData = function(array) {
-    $.each(array, function(index, innerArray) {
+var formatChartData = function (array) {
+    $.each(array, function (index, innerArray) {
         if (index > 0) {
-            $.each(innerArray, function(index2, value) {
+            $.each(innerArray, function (index2, value) {
                 if (index2 > 0 && index > 0) {
                     array[index][index2] = parseInt(value);
                 }
@@ -114,9 +114,11 @@ var formatChartData = function(array) {
         innerArray.splice(innerArray.length - 1, 1);
     });
     array.splice(array.length - 1, 1);
+
+    return array;
 };
 
-var chooseChartType = function(chartTypeChanged) {
+var chooseChartType = function (chartTypeChanged) {
     if ($("input[name='chart']:checked").val() == 'column') {
         drawColumnChart(chartTypeChanged);
     } else if ($("input[name='chart']:checked").val() == 'pie') {
@@ -132,13 +134,11 @@ var chooseChartType = function(chartTypeChanged) {
     }
 };
 
-
-var updateArray = function (save) {
+//Update methods
+var updateData = function (save) {
     var $container = $("#dataTable");
     var handsontable = $container.data('handsontable');
-    array = handsontable.getData();
-    formatChartData(array);
-    values.array = array;
+    settings.data = formatChartData(handsontable.getData());
 
     if (save) {
         updateHiddenField();
@@ -147,28 +147,24 @@ var updateArray = function (save) {
 };
 
 var updateHAxis = function (save) {
-    values.hAxisTitle = array[0][0];
-    options.hAxis.title = values.hAxisTitle;
-    
+    settings.options.hAxis.title = settings.data[0][0];
     if (save) {
         updateHiddenField();
     }
-}; 
+};
 
 var updateTitle = function (save) {
-    values.title = $("#chartTitle").val();
-    options.title = values.title;
-
+    settings.options.title = $("#chartTitle").val();
     if (save) {
         updateHiddenField();
     }
 };
 
 var updateValues = function (save) {
-    values.chartType = $("input[name='chart']:checked").val();
-    values.is3D = $("#is3D").prop("checked");
-    values.width = $("#widthHidden").val();
-    values.height = $("#heightHidden").val();
+    settings.chartType = $("input[name='chart']:checked").val();
+    settings.options.is3D = $("#is3D").prop("checked");
+    settings.width = $("#widthHidden").val();
+    settings.height = $("#heightHidden").val();
 
     if (save) {
         updateHiddenField();
@@ -177,7 +173,7 @@ var updateValues = function (save) {
 
 var updateAll = function () {
 
-    updateArray();
+    updateData();
 
     updateTitle();
 
@@ -189,8 +185,10 @@ var updateAll = function () {
 
 };
 
-var updateHiddenField = function() {
-    $("#javaScriptArrayHidden").val(JSON.stringify(values));
+var updateHiddenField = function () {
+
+    $("#javaScriptArrayHidden").val(JSON.stringify(settings));
+
 };
 
 
@@ -199,30 +197,22 @@ $(function () {
     //Init
     if ($("#javaScriptArrayHidden").val() != "") {
 
-        values = $.parseJSON($("#javaScriptArrayHidden").val());
+        settings = $.parseJSON($("#javaScriptArrayHidden").val());
 
-        if (values.array != undefined && values.array.length > 0) {
-            array = values.array;
+        if (settings.options != undefined) {
+            if (settings.options.title != undefined || settings.options.title != "") {
+                $("#chartTitle").val(settings.options.title);
+            } else {
+                $("#chartTitle").val("");
+            }
+
+            if (settings.options.is3D != undefined) {
+                $("#is3D").prop("checked", settings.options.is3D);
+            }
         }
 
-        if (values.HAxisTitle != undefined) {
-            options.hAxis.title = values.hAxisTitle;
-        }
-
-        if (values.title != undefined || values.title != "") {
-            $("#chartTitle").val(values.title);
-            options.title = values.title;
-
-        } else {
-            $("#chartTitle").val("");
-            options.title = "";
-        }
-
-        if (values.is3D != undefined) {
-            $("#is3D").prop("checked", values.is3D);
-        }
-        if (values.chartType != undefined) {
-            $("#" + values.chartType).prop("checked", true);
+        if (settings.chartType != undefined) {
+            $("#" + settings.chartType).prop("checked", true);
         }
 
         chooseChartType(true);
@@ -238,40 +228,29 @@ $(function () {
                 return;
             }
             //Update Chart when editing table
-            updateArray(false);
+            updateData(false);
             updateHAxis(true);
             chooseChartType(false);
         }
     });
 
-    $("#dataTable").handsontable("loadData", array);
-    
-
+    $("#dataTable").handsontable("loadData", settings.data);
 
     $("input.checkboxes").click(function () {
         updateValues(true);
         determineOption();
     });
 
-  
-
     $("#chartTitle").blur(function () {
         updateTitle(true);
         chooseChartType(false);
 
     });
-
-    //    $("#saveButton").click(function () {
-
-    //        updateChartAndValues();
-    //    });
-
+   
     $("input[name='chart']:radio").change(function () {
         updateValues(true);
         chooseChartType(true);
 
     });
-
-
 
 });

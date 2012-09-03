@@ -5,7 +5,7 @@
 <umb:JsInclude ID="JsIncludeHandsonTable" runat="server" FilePath="plugins/Wecode.Umbraco.ChartTool/jquery.handsontable.js" PathNameAlias="UmbracoRoot"/>
 <umb:JsInclude ID="JsIncludeGoogleChartsAPI" runat="server" FilePath="https://www.google.com/jsapi"  />
 <%--<umb:JsInclude ID="JsIncludeChartTool" runat="server" FilePath="plugins/Wecode.Umbraco.ChartTool/chartTool.js" PathNameAlias="UmbracoRoot"/>--%>
-<script type="text/javascript" src="plugins/Wecode.Umbraco.ChartTool/chartTool.js?v=000009"></script>
+<script type="text/javascript" src="plugins/Wecode.Umbraco.ChartTool/chartTool.js?v=000012"></script>
     
   
     <fieldset>

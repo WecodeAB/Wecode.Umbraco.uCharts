@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wecode.Umbraco", "Wecode.Umbraco\Wecode.Umbraco.csproj", "{BB5883DE-535A-4303-83E3-E5D568A9C8E3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wecode.Umbraco.ChartTool", "Wecode.Umbraco.ChartTool\Wecode.Umbraco.ChartTool.csproj", "{7E5DACF1-D42A-46C3-8B6D-8EE2735C4056}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{BB5883DE-535A-4303-83E3-E5D568A9C8E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB5883DE-535A-4303-83E3-E5D568A9C8E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB5883DE-535A-4303-83E3-E5D568A9C8E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E5DACF1-D42A-46C3-8B6D-8EE2735C4056}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E5DACF1-D42A-46C3-8B6D-8EE2735C4056}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E5DACF1-D42A-46C3-8B6D-8EE2735C4056}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E5DACF1-D42A-46C3-8B6D-8EE2735C4056}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

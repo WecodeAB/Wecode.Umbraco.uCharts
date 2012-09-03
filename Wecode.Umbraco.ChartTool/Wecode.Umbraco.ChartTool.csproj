@@ -133,11 +133,11 @@
     </VisualStudio>
   </ProjectExtensions>
   <PropertyGroup>
-    <PostBuildEvent>XCOPY "$(ProjectDir)bin\Wecode.Umbraco.ChartTool.*" "$(ProjectDir)..\Umbraco\bin" /Y /R
-XCOPY "$(ProjectDir)*.png" "$(ProjectDir)..\Umbraco\umbraco\plugins\Wecode.Umbraco.ChartTool" /Y /R
-XCOPY "$(ProjectDir)*.ascx" "$(ProjectDir)..\Umbraco\umbraco\plugins\Wecode.Umbraco.ChartTool" /Y /R
-XCOPY "$(ProjectDir)*.js" "$(ProjectDir)..\Umbraco\umbraco\plugins\Wecode.Umbraco.ChartTool" /Y /R
-XCOPY "$(ProjectDir)*.css" "$(ProjectDir)..\Umbraco\umbraco\plugins\Wecode.Umbraco.ChartTool" /Y /R</PostBuildEvent>
+    <PostBuildEvent>XCOPY "$(ProjectDir)bin\Wecode.Umbraco.ChartTool.*" "$(ProjectDir)..\Wecode.Umbraco\bin" /Y /R
+XCOPY "$(ProjectDir)*.png" "$(ProjectDir)..\Wecode.Umbraco\umbraco\plugins\Wecode.Umbraco.ChartTool" /Y /R
+XCOPY "$(ProjectDir)*.ascx" "$(ProjectDir)..\Wecode.Umbraco\umbraco\plugins\Wecode.Umbraco.ChartTool" /Y /R
+XCOPY "$(ProjectDir)*.js" "$(ProjectDir)..\Wecode.Umbraco\umbraco\plugins\Wecode.Umbraco.ChartTool" /Y /R
+XCOPY "$(ProjectDir)*.css" "$(ProjectDir)..\Wecode.Umbraco\umbraco\plugins\Wecode.Umbraco.ChartTool" /Y /R</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
