@@ -1,9 +1,6 @@
 ﻿
 //Globals
-var chart;
 var settings = settings || { data: [], options: {} };
-google.load("visualization", "1", { packages: ["corechart"] });
-google.setOnLoadCallback(initChart);
 
 settings.data = [
             ['Year', 'Sales', 'Expenses'],
@@ -14,10 +11,10 @@ settings.data = [
         ];
 
 settings.options = {
-    title: 'Company Performance',
-    hAxis: { title: 'Year' },
+    title: 'Chart Title',
+    hAxis: { title: 'X-axis title' },
     animation: { duration: 1000, easing: 'out' },
-    chartArea: { left: 50, top: 50, width: "80%", height: "80%" },
+    chartArea: { left: 50, top: 50, width: "80%", height: "70%" },
     is3D: true
 };
 
@@ -42,96 +39,6 @@ var determineOption = function () {
 
 var rerenderChart = function () {
     chooseChartType(false);
-};
-
-//chart methods
-var initChart = function () {
-    chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
-};
-
-var drawBarChart = function (chartTypeChanged) {
-
-    if (chartTypeChanged == true) {
-        chart = new google.visualization.BarChart(document.getElementById('chart_div'));
-    }
-    var data = google.visualization.arrayToDataTable(settings.data);
-    chart.draw(data, settings.options);
-
-};
-
-var drawColumnChart = function (chartTypeChanged) {
-
-    if (chartTypeChanged == true) {
-        chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
-    }
-    var data = google.visualization.arrayToDataTable(settings.data);
-    chart.draw(data, settings.options);
-
-};
-
-var drawLineChart = function (chartTypeChanged) {
-
-    if (chartTypeChanged == true) {
-        chart = new google.visualization.LineChart(document.getElementById('chart_div'));
-    }
-    var data = google.visualization.arrayToDataTable(settings.data);
-
-    settings.options.curveType = "none";
-    chart.draw(data, settings.options);
-};
-
-var drawCurveChart = function (chartTypeChanged) {
-
-    if (chartTypeChanged == true) {
-        chart = new google.visualization.LineChart(document.getElementById('chart_div'));
-    }
-    var data = google.visualization.arrayToDataTable(settings.data);
-
-    settings.options.curveType = "function";
-    chart.draw(data, settings.options);
-};
-
-var drawPieChart = function (chartTypeChanged) {
-
-    if (chartTypeChanged == true) {
-        chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-    }
-    var data = google.visualization.arrayToDataTable(settings.data);
-    chart.draw(data, settings.options);
-
-};
-
-// helper methods
-var formatChartData = function (array) {
-    $.each(array, function (index, innerArray) {
-        if (index > 0) {
-            $.each(innerArray, function (index2, value) {
-                if (index2 > 0 && index > 0) {
-                    array[index][index2] = parseInt(value);
-                }
-            });
-        }
-        innerArray.splice(innerArray.length - 1, 1);
-    });
-    array.splice(array.length - 1, 1);
-
-    return array;
-};
-
-var chooseChartType = function (chartTypeChanged) {
-    if ($("input[name='chart']:checked").val() == 'column') {
-        drawColumnChart(chartTypeChanged);
-    } else if ($("input[name='chart']:checked").val() == 'pie') {
-        drawPieChart(chartTypeChanged);
-    } else if ($("input[name='chart']:checked").val() == 'bar') {
-        drawBarChart(chartTypeChanged);
-    } else if ($("input[name='chart']:checked").val() == 'pie') {
-        drawPieChart(chartTypeChanged);
-    } else if ($("input[name='chart']:checked").val() == 'curve') {
-        drawCurveChart(chartTypeChanged);
-    } else {
-        drawLineChart(chartTypeChanged);
-    }
 };
 
 //Update methods

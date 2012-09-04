@@ -51,6 +51,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.WebPages, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -67,6 +68,9 @@
     <Reference Include="umbraco.editorControls">
       <HintPath>..\tnssifo\bin\umbraco.editorControls.dll</HintPath>
     </Reference>
+    <Reference Include="umbraco.MacroEngines">
+      <HintPath>..\Wecode.Umbraco\bin\umbraco.MacroEngines.dll</HintPath>
+    </Reference>
     <Reference Include="umbraco.providers">
       <HintPath>..\tnssifo\bin\umbraco.providers.dll</HintPath>
     </Reference>
@@ -80,6 +84,7 @@
   <ItemGroup>
     <Content Include="ChartTool.ascx" />
     <Content Include="chartTool.js" />
+    <Content Include="chartToolHelpers.js" />
     <Content Include="chart_bar.png" />
     <Content Include="chart_column.png" />
     <Content Include="chart_curve.png" />
@@ -110,7 +115,11 @@
     <Compile Include="IChartEditor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="ChartTool.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
   <ProjectExtensions>
@@ -137,7 +146,8 @@
 XCOPY "$(ProjectDir)*.png" "$(ProjectDir)..\Wecode.Umbraco\umbraco\plugins\Wecode.Umbraco.ChartTool" /Y /R
 XCOPY "$(ProjectDir)*.ascx" "$(ProjectDir)..\Wecode.Umbraco\umbraco\plugins\Wecode.Umbraco.ChartTool" /Y /R
 XCOPY "$(ProjectDir)*.js" "$(ProjectDir)..\Wecode.Umbraco\umbraco\plugins\Wecode.Umbraco.ChartTool" /Y /R
-XCOPY "$(ProjectDir)*.css" "$(ProjectDir)..\Wecode.Umbraco\umbraco\plugins\Wecode.Umbraco.ChartTool" /Y /R</PostBuildEvent>
+XCOPY "$(ProjectDir)*.css" "$(ProjectDir)..\Wecode.Umbraco\umbraco\plugins\Wecode.Umbraco.ChartTool" /Y /R
+XCOPY "$(ProjectDir)*.cshtml" "$(ProjectDir)..\Wecode.Umbraco\macroScripts" /Y /R</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
