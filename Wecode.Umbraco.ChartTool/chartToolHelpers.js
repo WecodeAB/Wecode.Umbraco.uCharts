@@ -5,13 +5,13 @@ google.setOnLoadCallback(initChart);
 
 //chart methods
 var initChart = function () {
-    chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+    chart = new google.visualization.ColumnChart($('#chart_div')[0]);
 };
 
 var drawBarChart = function (chartTypeChanged) {
 
     if (chartTypeChanged == true) {
-        chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+        chart = new google.visualization.BarChart($('#chart_div')[0]);
     }
     var data = google.visualization.arrayToDataTable(settings.data);
     chart.draw(data, settings.options);
@@ -21,7 +21,7 @@ var drawBarChart = function (chartTypeChanged) {
 var drawColumnChart = function (chartTypeChanged) {
 
     if (chartTypeChanged == true) {
-        chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+        chart = new google.visualization.ColumnChart($('#chart_div')[0]);
     }
     var data = google.visualization.arrayToDataTable(settings.data);
     chart.draw(data, settings.options);
@@ -31,7 +31,7 @@ var drawColumnChart = function (chartTypeChanged) {
 var drawLineChart = function (chartTypeChanged) {
 
     if (chartTypeChanged == true) {
-        chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+        chart = new google.visualization.LineChart($('#chart_div')[0]);
     }
     var data = google.visualization.arrayToDataTable(settings.data);
 
@@ -42,7 +42,7 @@ var drawLineChart = function (chartTypeChanged) {
 var drawCurveChart = function (chartTypeChanged) {
 
     if (chartTypeChanged == true) {
-        chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+        chart = new google.visualization.LineChart($('#chart_div')[0]);
     }
     var data = google.visualization.arrayToDataTable(settings.data);
 
@@ -53,7 +53,7 @@ var drawCurveChart = function (chartTypeChanged) {
 var drawPieChart = function (chartTypeChanged) {
 
     if (chartTypeChanged == true) {
-        chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+        chart = new google.visualization.PieChart($('#chart_div')[0]);
     }
     var data = google.visualization.arrayToDataTable(settings.data);
     chart.draw(data, settings.options);
