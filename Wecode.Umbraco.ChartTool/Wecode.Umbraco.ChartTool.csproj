@@ -85,6 +85,7 @@
     <Content Include="ChartTool.ascx" />
     <Content Include="chartTool.js" />
     <Content Include="chartToolHelpers.js" />
+    <Content Include="ChartToolTest.htm" />
     <Content Include="chart_bar.png" />
     <Content Include="chart_column.png" />
     <Content Include="chart_curve.png" />

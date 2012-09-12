@@ -22,24 +22,6 @@ namespace Wecode.Umbraco.ChartTool {
         protected global::ClientDependency.Core.Controls.CssInclude CssIncludeHandsonTable;
         
         /// <summary>
-        /// JsIncludeHandsonTable control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::ClientDependency.Core.Controls.JsInclude JsIncludeHandsonTable;
-        
-        /// <summary>
-        /// JsIncludeGoogleChartsAPI control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::ClientDependency.Core.Controls.JsInclude JsIncludeGoogleChartsAPI;
-        
-        /// <summary>
         /// placeHolderChartTitle control.
         /// </summary>
         /// <remarks>
@@ -47,6 +29,24 @@ namespace Wecode.Umbraco.ChartTool {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.PlaceHolder placeHolderChartTitle;
+        
+        /// <summary>
+        /// placeHolderChartHAxisTitle control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder placeHolderChartHAxisTitle;
+        
+        /// <summary>
+        /// placeHolderChartVAxisTitle control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder placeHolderChartVAxisTitle;
         
         /// <summary>
         /// javaScriptArrayHidden control.
@@ -119,5 +119,14 @@ namespace Wecode.Umbraco.ChartTool {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.PlaceHolder placeHolderPieChart;
+        
+        /// <summary>
+        /// chart_div control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl chart_div;
     }
 }

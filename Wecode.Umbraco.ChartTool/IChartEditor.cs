@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.UI;
 
 namespace Wecode.Umbraco.ChartTool
 {
@@ -16,5 +17,8 @@ namespace Wecode.Umbraco.ChartTool
         bool EnableChartTitle { get; set; }
         int ChartWidth{ get; set; }
         int ChartHeight { get; set; }
+
+       
+        ControlCollection OptionControls{ get; set; }
     }
 }

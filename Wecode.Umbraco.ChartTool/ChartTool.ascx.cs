@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Globalization;
 using System.Web.UI;
+using System.Web.UI.WebControls;
 using umbraco.editorControls.userControlGrapper;
 
 namespace Wecode.Umbraco.ChartTool
@@ -12,13 +15,33 @@ namespace Wecode.Umbraco.ChartTool
             if (!string.IsNullOrEmpty(_umbracoValue))
                 javaScriptArrayHidden.Value = _umbracoValue;
 
-            widthHidden.Value = ChartWidth.ToString();
-            heightHidden.Value = ChartHeight.ToString();
+            widthHidden.Value = ChartWidth.ToString(CultureInfo.InvariantCulture);
+            heightHidden.Value = ChartHeight.ToString(CultureInfo.InvariantCulture);
             
 
             ToggleChartTypes();
             ToggleOptions();
-   
+            SetChartContainerValues();
+            RenderOptionControls();
+
+        }
+
+        private void RenderOptionControls()
+        {
+            foreach (Control optionControl in OptionControls)
+            {
+                this.Controls.Add(optionControl);
+            }
+        }
+
+        private void SetChartContainerValues()
+        {
+            var styleString = string.Format("width: {0}px;height: {1}px;", 
+                ChartWidth > 0 ? ChartWidth.ToString(CultureInfo.InvariantCulture) : "700",
+                ChartHeight > 0 ? ChartHeight.ToString(CultureInfo.InvariantCulture) : "500");
+
+            chart_div.Attributes.Add("style", styleString);
+            //style="width: 700px;height: 200px; overflow: scroll"
         }
 
         private void ToggleOptions()
@@ -66,6 +89,8 @@ namespace Wecode.Umbraco.ChartTool
         public bool EnableChartTitle { get; set; }
         public int ChartWidth { get; set; }
         public int ChartHeight { get; set; }
+
+        public ControlCollection OptionControls{get; set; }
 
         #endregion
 

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using umbraco.IO;
@@ -53,6 +54,10 @@ namespace Wecode.Umbraco.ChartTool
         public int ChartWidth { get; set; }
         public int ChartHeight { get; set; }
 
+        public ControlCollection OptionControls
+        {
+            get; set; }
+
         #endregion
 
         #endregion
@@ -68,7 +73,8 @@ namespace Wecode.Umbraco.ChartTool
         {
             base.OnLoad(e);
 
-            ((ChartTool)Controls[0]).EnableColumnChart = EnableColumnChart;
+            ((ChartTool) Controls[0]).OptionControls = OptionControls;
+            ((ChartTool) Controls[0]).EnableColumnChart = EnableColumnChart;
             ((ChartTool) Controls[0]).EnableBarChart = EnableBarChart;
             ((ChartTool) Controls[0]).EnableChartTitle = EnableChartTitle;
             ((ChartTool) Controls[0]).EnableCurveChart = EnableCurveChart;

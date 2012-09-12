@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="jquery.handsontable.css"/>
+    <script type="text/javascript" src="jquery-1.8.0.min.js"></script>
+    <script type="text/javascript" src="jquery.handsontable.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="chartTool.js"></script>
+</head>
+    <body>
+        <textarea id="javaScriptArrayHidden" style="width: 500px;height: 250px;"></textarea>
+        <fieldset>
+            <legend>Input Data</legend>
+        
+            <div>
+                <label for="chartTitle">Chart Title</label>
+                <input type="text" id="chartTitle" data-key="title" class="chartSetting"/>
+            </div>
+        
+            <div>
+                <label for="chartHAxisTitle">Horizontal Axis Title</label>
+                <input type="text" id="chartHAxisTitle" data-key="hAxis.title" class="chartSetting"/>
+            </div>
+        
+            <div>
+                <label for="chartVAxisTitle">Vertical Axis Title</label>
+                <input type="text" id="chartVAxisTitle" data-key="vAxis.title" class="chartSetting"/>
+            </div>
+        
+            <div>
+                <label for="chartVAxisTitle">Animation easing</label>
+                <input type="text" id="chartAnimationEasing" data-key="animation.easing" class="chartSettings"/>
+            </div>
+       
+
+            <div id="dataTable" class="dataTable" style="width: 700px;height: 200px; overflow: scroll"></div>
+       
+        
+        </fieldset>
+        
+          <fieldset>
+            <legend>Options</legend>
+            <div>
+                <input class="chartSetting" data-key="gridLines" type="checkbox" id="gridLines" name="gridLines" value="gridLines" title="Grid Lines"/>
+                <label for="gridLines">
+                    <img src="chart_gridLines.png" alt="Grid Lines"/> 
+                    Show grid lines
+                </label>
+                
+            </div>
+            <div>
+                <input class="chartSetting" data-key="is3D" type="checkbox" id="is3D" />
+                <label for="is3D">
+                    
+                    3D chart
+                </label>
+                
+            </div>
+        </fieldset>
+        <br/>
+        <br/>
+     
+        <fieldset>
+            <legend>Choose Chart Type</legend>
+        
+            <div>
+                <input type="radio" id="column" name="chart" value="column" title="Column Chart" data-key="Column" class="chartChooser"/>
+                <label for="bar">
+                    <img src="chart_column.png" alt="Column Chart"/>
+                    Column Chart
+                </label>
+            </div>
+        
+            <div>
+                <input type="radio" id="bar" name="chart" value="bar" title="Bar Chart" data-key="Bar" class="chartChooser"/>
+                <label for="bar">
+                    <img src="chart_bar.png" alt="Bar Chart"/>
+                    Bar Chart
+                </label>
+            </div>
+        
+            <div>
+               
+                <input type="radio" id="line" name="chart" value="line" title="Line Chart" data-key="Line" class="chartChooser"/>
+                <label for="line">
+                    <img src="chart_line.png" alt="Line Chart"/> 
+                    Line Chart
+                </label>
+            </div>
+        
+            <div>
+               
+                <input type="radio" id="curve" name="chart" value="curve" title="Curve Chart" data-key="Curve" class="chartChooser"/>
+                <label for="curve">
+                    <img src="chart_curve.png" alt="Curve Chart"/>
+                    Curve Chart
+                </label>
+            </div>
+        
+            <div>
+                <input type="radio" id="pie" name="chart" value="pie" title="Pie Chart" data-key="Pie" class="chartChooser"/>
+                <label for="pie">
+                    <img src="chart_pie.png" alt="Pie Chart"/>
+                    Pie Chart
+                </label>
+               
+            </div>
+        
+        </fieldset>
+        <br />
+        <br />
+      
+        <br/>
+        <br/>
+   
+        <fieldset>
+            <legend>Chart</legend>
+            <div id="chart_div" style="width: 500px;height: 400px"></div>
+        </fieldset>
+
+    </body>
+</html>

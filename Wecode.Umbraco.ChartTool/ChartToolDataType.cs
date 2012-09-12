@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Web.UI;
+using System.Web.UI.WebControls;
 using umbraco.cms.businesslogic.datatype;
 
 namespace Wecode.Umbraco.ChartTool
@@ -97,6 +99,18 @@ namespace Wecode.Umbraco.ChartTool
         {
             bool flag;
 
+
+            _control.OptionControls = new ControlCollection(_control);
+
+            AddOptionsControl("Chart Height", "ChartHeight", "chartHeight", new TextBox(), _control.OptionControls);
+            AddOptionsControl("Chart Width", "ChartWidth", "chartWidth", new TextBox(), _control.OptionControls);
+            AddOptionsControl("Background Color", "BackgroundColorFill", "backgroundColor.fill", new TextBox(), _control.OptionControls);
+            AddOptionsControl("Frame Width", "BackgroundColorStrokeWidth", "backgroundColor.strokeWidth", new TextBox(), _control.OptionControls);
+            AddOptionsControl("Frame Color", "BackgroundColorStroke", "backgroundColor.stroke", new TextBox(), _control.OptionControls);
+            AddOptionsControl("Legend position", "LegendPosition", "legend.position", new TextBox(), _control.OptionControls);
+            AddOptionsControl("Is 3D", "Is3D", "is3D", new CheckBox(), _control.OptionControls);
+
+
             _control.EnableColumnChart = !bool.TryParse(EnableColumnChart, out flag) || flag;
             _control.EnableBarChart = !bool.TryParse(EnableBarChart, out flag) || flag;
             _control.EnableChartTitle = !bool.TryParse(EnableChartTitle, out flag) || flag;
@@ -112,6 +126,28 @@ namespace Wecode.Umbraco.ChartTool
            
             _control.Value = base.Data.Value != null ? base.Data.Value.ToString() : "";
            
+        }
+
+        private void AddOptionsControl(string labelText, string id, string dataKey, Control control, ControlCollection controlCollection)
+        {
+            var label = new Label { Text = labelText, AssociatedControlID = id };
+
+            control.ID = id;
+            control.ClientIDMode = ClientIDMode.Static;
+
+            if (control is TextBox)
+            {
+                ((TextBox) control).CssClass = "chartSetting";
+                ((TextBox)control).Attributes.Add("data-key", dataKey);
+            }
+            else if (control is CheckBox)
+            {
+                ((CheckBox) control).CssClass = "chartSetting";
+                ((CheckBox) control).Attributes.Add("data-key", dataKey);
+            }
+           
+            controlCollection.Add(label);
+            controlCollection.Add(control);
         }
 
         void DataEditorControl_OnSave(EventArgs e)
