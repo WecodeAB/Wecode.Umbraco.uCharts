@@ -107,6 +107,23 @@
         };
     })();
 
+    var colors = [
+        { color: '#C50017', visibleInLegend: true },
+        { color: '#F7911E', visibleInLegend: true },
+        { color: '#EF5205', visibleInLegend: true },
+        { color: '#7A2280', visibleInLegend: true },
+        { color: '#4C1D52', visibleInLegend: true },
+        { color: '#4655A5', visibleInLegend: true },
+        { color: '#3EB1CC', visibleInLegend: true },
+        { color: '#131C6B', visibleInLegend: true },
+        { color: '#BB3FC1', visibleInLegend: true },
+        { color: '#798EDF', visibleInLegend: true },
+        { color: '#6DE7F6', visibleInLegend: true },
+        { color: '#0F7BA2', visibleInLegend: true },
+        { color: '#F1002B', visibleInLegend: true },
+        { color: '#990002', visibleInLegend: true }            
+    ];
+
     chart.settings = {
         data: [
 				["", "Sales", "Expenses"],
@@ -132,7 +149,9 @@
                 top: 50,
                 width: "80%",
                 height: "70%"
-            }
+            },
+            series: colors,
+            slices: colors 
             
         },
         chartType: "Column"

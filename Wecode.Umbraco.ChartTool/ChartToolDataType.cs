@@ -102,13 +102,13 @@ namespace Wecode.Umbraco.ChartTool
 
             _control.OptionControls = new ControlCollection(_control);
 
-            AddOptionsControl("Chart Height", "ChartHeight", "chartHeight", new TextBox(), _control.OptionControls);
+            /*AddOptionsControl("Chart Height", "ChartHeight", "chartHeight", new TextBox(), _control.OptionControls);
             AddOptionsControl("Chart Width", "ChartWidth", "chartWidth", new TextBox(), _control.OptionControls);
             AddOptionsControl("Background Color", "BackgroundColorFill", "backgroundColor.fill", new TextBox(), _control.OptionControls);
             AddOptionsControl("Frame Width", "BackgroundColorStrokeWidth", "backgroundColor.strokeWidth", new TextBox(), _control.OptionControls);
             AddOptionsControl("Frame Color", "BackgroundColorStroke", "backgroundColor.stroke", new TextBox(), _control.OptionControls);
             AddOptionsControl("Legend position", "LegendPosition", "legend.position", new TextBox(), _control.OptionControls);
-            AddOptionsControl("Is 3D", "Is3D", "is3D", new CheckBox(), _control.OptionControls);
+            AddOptionsControl("Is 3D", "Is3D", "is3D", new CheckBox(), _control.OptionControls);*/
 
 
             _control.EnableColumnChart = !bool.TryParse(EnableColumnChart, out flag) || flag;

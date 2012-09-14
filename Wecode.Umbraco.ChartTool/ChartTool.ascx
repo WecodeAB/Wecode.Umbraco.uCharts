@@ -9,7 +9,7 @@
 
 <script type="text/javascript" src="plugins/Wecode.Umbraco.ChartTool/jquery.handsontable.js"></script>
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-<script type="text/javascript" src="plugins/Wecode.Umbraco.ChartTool/chartTool.js?v=000000006"></script>
+<script type="text/javascript" src="plugins/Wecode.Umbraco.ChartTool/chartTool.js?v=00000007"></script>
     
   
     <fieldset>
