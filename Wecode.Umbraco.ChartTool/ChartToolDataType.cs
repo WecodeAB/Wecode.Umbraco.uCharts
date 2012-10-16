@@ -124,7 +124,7 @@ namespace Wecode.Umbraco.ChartTool
             _control.ChartHeight = int.TryParse(ChartHeight, out testInt) ? testInt : -1;
             _control.ChartWidth = int.TryParse(ChartWidth, out testInt) ? testInt : -1;
            
-            _control.Value = base.Data.Value != null ? base.Data.Value.ToString() : "";
+            _control.EditorValue = base.Data.Value != null ? base.Data.Value.ToString() : ""; 
            
         }
 
@@ -152,7 +152,7 @@ namespace Wecode.Umbraco.ChartTool
 
         void DataEditorControl_OnSave(EventArgs e)
         {
-            base.Data.Value = _control.Value;
+            base.Data.Value = _control.EditorValue;
             //throw new Exception("Trying to save. Value is:" + _control.value);
         }
     }

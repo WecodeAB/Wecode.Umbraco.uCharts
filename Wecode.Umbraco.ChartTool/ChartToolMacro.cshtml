@@ -1,0 +1,18 @@
+﻿@using umbraco.MacroEngines
+@inherits DynamicNodeContext
+@{
+    var id = Guid.NewGuid();
+    var chartToolId = "chart_div_" + id;
+    
+    <script type="text/javascript">
+        $(function () {
+            renderGoogleChart(
+                $.parseJSON('@Html.Raw(Parameter.chartTool)'.replace(/&quot;/gi, "\"")),
+                "@chartToolId"
+            );
+        });
+    </script>
+    <div id="@chartToolId" class="chart_div" style="width:500px; height:500px"></div>    
+    
+    
+}

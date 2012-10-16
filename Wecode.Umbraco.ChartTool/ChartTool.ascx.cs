@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using umbraco.editorControls.userControlGrapper;
@@ -28,9 +29,12 @@ namespace Wecode.Umbraco.ChartTool
 
         private void RenderOptionControls()
         {
-            foreach (Control optionControl in OptionControls)
+            if (OptionControls != null)
             {
-                this.Controls.Add(optionControl);
+                foreach (Control optionControl in OptionControls)
+                {
+                    this.Controls.Add(optionControl);
+                }
             }
         }
 

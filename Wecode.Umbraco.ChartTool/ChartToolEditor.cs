@@ -13,7 +13,7 @@ namespace Wecode.Umbraco.ChartTool
 
         #region Properties
 
-        private bool FirstLoad
+        protected bool FirstLoad
         {
             get
             {
@@ -32,7 +32,7 @@ namespace Wecode.Umbraco.ChartTool
 
         #region Implementation of IChartEditor
 
-        public object Value
+        public object EditorValue
         {
             get
             {

@@ -84,7 +84,7 @@
   <ItemGroup>
     <Content Include="ChartTool.ascx" />
     <Content Include="chartTool.js" />
-    <Content Include="chartToolHelpers.js" />
+    <Content Include="chartToolMacro.js" />
     <Content Include="ChartToolTest.htm" />
     <Content Include="chart_bar.png" />
     <Content Include="chart_column.png" />
@@ -113,13 +113,12 @@
     </Compile>
     <Compile Include="ChartToolDataType.cs" />
     <Compile Include="ChartToolEditor.cs" />
+    <Compile Include="ChartToolMacroRender.cs" />
     <Compile Include="IChartEditor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ChartTool.cshtml">
-      <SubType>Code</SubType>
-    </Content>
+    <Content Include="ChartToolMacro.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

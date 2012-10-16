@@ -7,9 +7,9 @@
 <umb:JsInclude ID="JsIncludeGoogleChartsAPI" runat="server" FilePath="https://www.google.com/jsapi"  />
 <umb:JsInclude ID="JsIncludeChartTool" runat="server" FilePath="plugins/Wecode.Umbraco.ChartTool/chartTool.js" PathNameAlias="UmbracoRoot"/>--%>
 
-<script type="text/javascript" src="plugins/Wecode.Umbraco.ChartTool/jquery.handsontable.js"></script>
+<script type="text/javascript" src="/umbraco/plugins/Wecode.Umbraco.ChartTool/jquery.handsontable.js"></script>
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-<script type="text/javascript" src="plugins/Wecode.Umbraco.ChartTool/chartTool.js?v=00000007"></script>
+<script type="text/javascript" src="/umbraco/plugins/Wecode.Umbraco.ChartTool/chartTool.js?v=00000007u"></script>
     
   
     <fieldset>
@@ -51,7 +51,7 @@
             <div>
                 <input type="radio" id="column" name="chart" value="column" title="Column Chart" data-key="Column" class="chartChooser"/>
                 <label for="bar">
-                    <img src="plugins/Wecode.Umbraco.ChartTool/chart_column.png" alt="Column Chart"/>
+                    <img src="/umbraco/plugins/Wecode.Umbraco.ChartTool/chart_column.png" alt="Column Chart"/>
                     Column Chart
                 </label>
             </div>
@@ -60,7 +60,7 @@
             <div>
                 <input type="radio" id="bar" name="chart" value="bar" title="Bar Chart" data-key="Bar" class="chartChooser"/>
                 <label for="bar">
-                    <img src="plugins/Wecode.Umbraco.ChartTool/chart_bar.png" alt="Bar Chart"/>
+                    <img src="/umbraco/plugins/Wecode.Umbraco.ChartTool/chart_bar.png" alt="Bar Chart"/>
                     Bar Chart
                 </label>
             </div>
@@ -70,7 +70,7 @@
                
                 <input type="radio" id="line" name="chart" value="line" title="Line Chart" data-key="Line" class="chartChooser"/>
                  <label for="line">
-                     <img src="plugins/Wecode.Umbraco.ChartTool/chart_line.png" alt="Line Chart"/> 
+                     <img src="/umbraco/plugins/Wecode.Umbraco.ChartTool/chart_line.png" alt="Line Chart"/> 
                      Line Chart
                  </label>
             </div>
@@ -80,7 +80,7 @@
                
                 <input type="radio" id="curve" name="chart" value="curve" title="Curve Chart" data-key="Curve" class="chartChooser"/>
                  <label for="curve">
-                    <img src="plugins/Wecode.Umbraco.ChartTool/chart_curve.png" alt="Curve Chart"/>
+                    <img src="/umbraco/plugins/Wecode.Umbraco.ChartTool/chart_curve.png" alt="Curve Chart"/>
                     Curve Chart
                 </label>
             </div>
@@ -89,7 +89,7 @@
             <div>
                  <input type="radio" id="pie" name="chart" value="pie" title="Pie Chart" data-key="Pie" class="chartChooser"/>
                 <label for="pie">
-                    <img src="plugins/Wecode.Umbraco.ChartTool/chart_pie.png" alt="Pie Chart"/>
+                    <img src="/umbraco/plugins/Wecode.Umbraco.ChartTool/chart_pie.png" alt="Pie Chart"/>
                     Pie Chart
                 </label>
                
