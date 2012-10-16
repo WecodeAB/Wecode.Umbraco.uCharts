@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wecode.Umbraco", "Wecode.Umbraco\Wecode.Umbraco.csproj", "{BB5883DE-535A-4303-83E3-E5D568A9C8E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wecode.Umbraco.uCharts", "Wecode.Umbraco.ChartTool\Wecode.Umbraco.uCharts.csproj", "{7E5DACF1-D42A-46C3-8B6D-8EE2735C4056}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wecode.Umbraco.uCharts", "Wecode.Umbraco.uCharts\Wecode.Umbraco.uCharts.csproj", "{7E5DACF1-D42A-46C3-8B6D-8EE2735C4056}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
