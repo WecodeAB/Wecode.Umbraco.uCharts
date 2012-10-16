@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Wecode.Umbraco.ChartTool {
+namespace Wecode.Umbraco.uCharts {
     
     
     public partial class ChartTool {

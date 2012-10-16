@@ -1,14 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using umbraco.IO;
 
-namespace Wecode.Umbraco.ChartTool
+namespace Wecode.Umbraco.uCharts
 {
     public class ChartToolEditor : PlaceHolder, IChartEditor
     {
-        private string _usercontrolPath = IOHelper.ResolveUrl(SystemDirectories.Umbraco) + "/plugins/Wecode.Umbraco.ChartTool/ChartTool.ascx";
+        private string _usercontrolPath = IOHelper.ResolveUrl(SystemDirectories.Umbraco) + "/plugins/uCharts/ChartTool.ascx";
         private object _value;
 
         #region Properties

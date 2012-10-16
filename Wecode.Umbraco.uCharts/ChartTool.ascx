@@ -1,15 +1,15 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ChartTool.ascx.cs" Inherits="Wecode.Umbraco.ChartTool.ChartTool" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ChartTool.ascx.cs" Inherits="Wecode.Umbraco.uCharts.ChartTool" %>
 <%@ Register TagPrefix="umb" Namespace="ClientDependency.Core.Controls" Assembly="ClientDependency.Core" %>
 
 
-<umb:CssInclude ID="CssIncludeHandsonTable" runat="server" FilePath="plugins/Wecode.Umbraco.ChartTool/jquery.handsontable.css" PathNameAlias="UmbracoRoot"/>
+<umb:CssInclude ID="CssIncludeHandsonTable" runat="server" FilePath="plugins/uCharts/jquery.handsontable.css" PathNameAlias="UmbracoRoot"/>
 <%--<umb:JsInclude ID="JsIncludeHandsonTable" runat="server" FilePath="plugins/Wecode.Umbraco.ChartTool/jquery.handsontable.js" PathNameAlias="UmbracoRoot"/>
 <umb:JsInclude ID="JsIncludeGoogleChartsAPI" runat="server" FilePath="https://www.google.com/jsapi"  />
 <umb:JsInclude ID="JsIncludeChartTool" runat="server" FilePath="plugins/Wecode.Umbraco.ChartTool/chartTool.js" PathNameAlias="UmbracoRoot"/>--%>
 
-<script type="text/javascript" src="/umbraco/plugins/Wecode.Umbraco.ChartTool/jquery.handsontable.js"></script>
+<script type="text/javascript" src="/umbraco/plugins/uCharts/jquery.handsontable.js"></script>
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-<script type="text/javascript" src="/umbraco/plugins/Wecode.Umbraco.ChartTool/chartTool.js?v=00000007u"></script>
+<script type="text/javascript" src="/umbraco/plugins/uCharts/chartTool.js"></script>
     
   
     <fieldset>
@@ -51,7 +51,7 @@
             <div>
                 <input type="radio" id="column" name="chart" value="column" title="Column Chart" data-key="Column" class="chartChooser"/>
                 <label for="bar">
-                    <img src="/umbraco/plugins/Wecode.Umbraco.ChartTool/chart_column.png" alt="Column Chart"/>
+                    <img src="/umbraco/plugins/uCharts/chart_column.png" alt="Column Chart"/>
                     Column Chart
                 </label>
             </div>
@@ -60,7 +60,7 @@
             <div>
                 <input type="radio" id="bar" name="chart" value="bar" title="Bar Chart" data-key="Bar" class="chartChooser"/>
                 <label for="bar">
-                    <img src="/umbraco/plugins/Wecode.Umbraco.ChartTool/chart_bar.png" alt="Bar Chart"/>
+                    <img src="/umbraco/plugins/uCharts/chart_bar.png" alt="Bar Chart"/>
                     Bar Chart
                 </label>
             </div>
@@ -70,7 +70,7 @@
                
                 <input type="radio" id="line" name="chart" value="line" title="Line Chart" data-key="Line" class="chartChooser"/>
                  <label for="line">
-                     <img src="/umbraco/plugins/Wecode.Umbraco.ChartTool/chart_line.png" alt="Line Chart"/> 
+                     <img src="/umbraco/plugins/uCharts/chart_line.png" alt="Line Chart"/> 
                      Line Chart
                  </label>
             </div>
@@ -80,7 +80,7 @@
                
                 <input type="radio" id="curve" name="chart" value="curve" title="Curve Chart" data-key="Curve" class="chartChooser"/>
                  <label for="curve">
-                    <img src="/umbraco/plugins/Wecode.Umbraco.ChartTool/chart_curve.png" alt="Curve Chart"/>
+                    <img src="/umbraco/plugins/uCharts/chart_curve.png" alt="Curve Chart"/>
                     Curve Chart
                 </label>
             </div>
@@ -89,7 +89,7 @@
             <div>
                  <input type="radio" id="pie" name="chart" value="pie" title="Pie Chart" data-key="Pie" class="chartChooser"/>
                 <label for="pie">
-                    <img src="/umbraco/plugins/Wecode.Umbraco.ChartTool/chart_pie.png" alt="Pie Chart"/>
+                    <img src="/umbraco/plugins/uCharts/chart_pie.png" alt="Pie Chart"/>
                     Pie Chart
                 </label>
                
@@ -104,7 +104,7 @@
             <div>
                 <input class="checkboxes" data-key="gridLines" type="checkbox" id="gridLines" name="gridLines" value="gridLines" title="Grid Lines"/>
                 <label for="gridLines">
-                    <img src="plugins/Wecode.Umbraco.ChartTool/chart_gridLines.png" alt="Grid Lines"/> 
+                    <img src="plugins/uCharts/chart_gridLines.png" alt="Grid Lines"/> 
                     Show grid lines
                 </label>
                 

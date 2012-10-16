@@ -7,7 +7,7 @@
     <script type="text/javascript">
         $(function () {
             renderGoogleChart(
-                $.parseJSON('@Html.Raw(Parameter.chartTool)'.replace(/&quot;/gi, "\"")),
+                $.parseJSON('@Html.Raw(Parameter.uCharts)'.replace(/&quot;/gi, "\"")),
                 "@chartToolId"
             );
         });

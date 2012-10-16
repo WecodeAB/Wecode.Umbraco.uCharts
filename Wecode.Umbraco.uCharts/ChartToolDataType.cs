@@ -3,7 +3,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using umbraco.cms.businesslogic.datatype;
 
-namespace Wecode.Umbraco.ChartTool
+namespace Wecode.Umbraco.uCharts
 {
     public class ChartToolDataType : AbstractDataEditor
     {
@@ -11,31 +11,31 @@ namespace Wecode.Umbraco.ChartTool
 
         #region DataEditorSettings
 
-        [DataEditorSetting("<img src='/umbraco/plugins/Wecode.Umbraco.ChartTool/chart_column.png' alt='Column Chart'/> Column Chart",
+        [DataEditorSetting("<img src='/umbraco/plugins/uCharts/chart_column.png' alt='Column Chart'/> Column Chart",
             description = "Uncheck top disable column chart",
             defaultValue = true,
             type = typeof(umbraco.editorControls.SettingControls.CheckBox))]
         public string EnableColumnChart { get; set; }
         
-        [DataEditorSetting("<img src='/umbraco/plugins/Wecode.Umbraco.ChartTool/chart_bar.png' alt='Bar Chart'/> Bar Chart", 
+        [DataEditorSetting("<img src='/umbraco/plugins/uCharts/chart_bar.png' alt='Bar Chart'/> Bar Chart", 
             description = "Uncheck top disable bar chart",
             defaultValue = true, 
             type = typeof(umbraco.editorControls.SettingControls.CheckBox))]
         public string EnableBarChart { get; set; }
 
-        [DataEditorSetting("<img src='/umbraco/plugins/Wecode.Umbraco.ChartTool/chart_line.png' alt='Line Chart'/> Line Chart", 
+        [DataEditorSetting("<img src='/umbraco/plugins/uCharts/chart_line.png' alt='Line Chart'/> Line Chart", 
             description = "Uncheck top disable line chart", 
             defaultValue = true, 
             type = typeof(umbraco.editorControls.SettingControls.CheckBox))]
         public string EnableLineChart { get; set; }
 
-        [DataEditorSetting("<img src='/umbraco/plugins/Wecode.Umbraco.ChartTool/chart_curve.png' alt='Curve Chart'/> Curve Chart", 
+        [DataEditorSetting("<img src='/umbraco/plugins/uCharts/chart_curve.png' alt='Curve Chart'/> Curve Chart", 
             description = "Uncheck top disable curve chart", 
             defaultValue = true, 
             type = typeof(umbraco.editorControls.SettingControls.CheckBox))]
         public string EnableCurveChart { get; set; }
 
-        [DataEditorSetting("<img src='/umbraco/plugins/Wecode.Umbraco.ChartTool/chart_pie.png' alt='Pie Chart'/> Pie Chart", 
+        [DataEditorSetting("<img src='/umbraco/plugins/uCharts/chart_pie.png' alt='Pie Chart'/> Pie Chart", 
             description = "Uncheck top disable pie chart", 
             defaultValue = true, 
             type = typeof(umbraco.editorControls.SettingControls.CheckBox))]
@@ -70,7 +70,7 @@ namespace Wecode.Umbraco.ChartTool
         {
             get
             {
-                return new Guid("1BA9853C-8772-43A8-937B-E865B21DFDDA");
+                return new Guid("1BA9853C-8772-43A8-937B-E865B21DFDDB");
             }
         }
 
@@ -79,7 +79,7 @@ namespace Wecode.Umbraco.ChartTool
         {
             get
             {
-                return "Chart Tool";
+                return "uCharts";
             }
         }
 

@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Web;
 using System.Web.UI;
 using umbraco.interfaces;
 
-namespace Wecode.Umbraco.ChartTool
+namespace Wecode.Umbraco.uCharts
 {
     public class ChartToolMacroRender : ChartToolEditor, IMacroGuiRendering
     {

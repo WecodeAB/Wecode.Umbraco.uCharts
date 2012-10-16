@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Globalization;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 using umbraco.editorControls.userControlGrapper;
 
-namespace Wecode.Umbraco.ChartTool
+namespace Wecode.Umbraco.uCharts
 {
     public partial class ChartTool : UserControl, IUsercontrolDataEditor, IChartEditor
     {

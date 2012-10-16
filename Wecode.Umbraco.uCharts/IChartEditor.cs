@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
+﻿using System.Web.UI;
 
-namespace Wecode.Umbraco.ChartTool
+namespace Wecode.Umbraco.uCharts
 {
     public interface IChartEditor
     {
