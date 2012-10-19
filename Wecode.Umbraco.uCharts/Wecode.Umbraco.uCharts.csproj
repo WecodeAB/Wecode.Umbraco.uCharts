@@ -92,6 +92,7 @@
     <Content Include="chart_gridLines.png" />
     <Content Include="chart_line.png" />
     <Content Include="chart_pie.png" />
+    <Content Include="Install.ascx" />
     <Content Include="jquery-1.8.0.min.js" />
     <Content Include="jquery.handsontable.css" />
     <Content Include="jquery.handsontable.js" />
@@ -115,10 +116,20 @@
     <Compile Include="ChartToolEditor.cs" />
     <Compile Include="ChartToolMacroRender.cs" />
     <Compile Include="IChartEditor.cs" />
+    <Compile Include="Install.ascx.cs">
+      <DependentUpon>Install.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Install.ascx.designer.cs">
+      <DependentUpon>Install.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="ChartToolMacro.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ChartToolDataTypeMacro.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

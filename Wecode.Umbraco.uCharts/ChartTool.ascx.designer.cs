@@ -22,6 +22,33 @@ namespace Wecode.Umbraco.uCharts {
         protected global::ClientDependency.Core.Controls.CssInclude CssIncludeHandsonTable;
         
         /// <summary>
+        /// JsIncludeHandsonTable control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::ClientDependency.Core.Controls.JsInclude JsIncludeHandsonTable;
+        
+        /// <summary>
+        /// JsIncludeGoogleChartsAPI control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::ClientDependency.Core.Controls.JsInclude JsIncludeGoogleChartsAPI;
+        
+        /// <summary>
+        /// JsIncludeChartTool control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::ClientDependency.Core.Controls.JsInclude JsIncludeChartTool;
+        
+        /// <summary>
         /// placeHolderChartTitle control.
         /// </summary>
         /// <remarks>

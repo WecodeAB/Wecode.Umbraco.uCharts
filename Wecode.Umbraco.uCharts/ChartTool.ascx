@@ -3,13 +3,15 @@
 
 
 <umb:CssInclude ID="CssIncludeHandsonTable" runat="server" FilePath="plugins/uCharts/jquery.handsontable.css" PathNameAlias="UmbracoRoot"/>
-<%--<umb:JsInclude ID="JsIncludeHandsonTable" runat="server" FilePath="plugins/Wecode.Umbraco.ChartTool/jquery.handsontable.js" PathNameAlias="UmbracoRoot"/>
+<umb:JsInclude ID="JsIncludeHandsonTable" runat="server" FilePath="plugins/uCharts/jquery.handsontable.js" PathNameAlias="UmbracoRoot"/>
 <umb:JsInclude ID="JsIncludeGoogleChartsAPI" runat="server" FilePath="https://www.google.com/jsapi"  />
-<umb:JsInclude ID="JsIncludeChartTool" runat="server" FilePath="plugins/Wecode.Umbraco.ChartTool/chartTool.js" PathNameAlias="UmbracoRoot"/>--%>
+<umb:JsInclude ID="JsIncludeChartTool" runat="server" FilePath="plugins/uCharts/chartTool.js" PathNameAlias="UmbracoRoot"/>
 
+<%-- 
 <script type="text/javascript" src="/umbraco/plugins/uCharts/jquery.handsontable.js"></script>
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <script type="text/javascript" src="/umbraco/plugins/uCharts/chartTool.js"></script>
+--%>
     
   
     <fieldset>
