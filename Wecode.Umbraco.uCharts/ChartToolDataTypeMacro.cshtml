@@ -3,8 +3,8 @@
 @{
     var id = Guid.NewGuid();
     var chartToolId = "chart_div_" + id;
-
-    var settings = (Model.GetProperty("uCharts") != null && Model.GetProperty("uCharts").Value != null) ? Html.Raw(Model.GetProperty("uCharts").Value) : null;
+    var propertyName = Parameter.propertyName.ToString();
+    var settings = (Model.GetProperty(propertyName) != null && Model.GetProperty(propertyName).Value != null) ? Html.Raw(Model.GetProperty(propertyName).Value) : null;
    
     if(settings != null)
     {
