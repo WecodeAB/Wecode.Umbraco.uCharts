@@ -9,7 +9,8 @@ namespace Wecode.Umbraco.uCharts
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            UniqueUChartId = Guid.NewGuid();
+            
             if (!string.IsNullOrEmpty(_umbracoValue))
                 javaScriptArrayHidden.Value = _umbracoValue;
 
@@ -94,6 +95,8 @@ namespace Wecode.Umbraco.uCharts
         public ControlCollection OptionControls{get; set; }
 
         #endregion
+
+        public Guid UniqueUChartId { get; set; }
 
         
     }

@@ -96,6 +96,7 @@
     <Content Include="jquery-1.8.0.min.js" />
     <Content Include="jquery.handsontable.css" />
     <Content Include="jquery.handsontable.js" />
+    <Content Include="uCharts.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

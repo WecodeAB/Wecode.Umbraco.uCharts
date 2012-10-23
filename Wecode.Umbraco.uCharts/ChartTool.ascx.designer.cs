@@ -40,13 +40,13 @@ namespace Wecode.Umbraco.uCharts {
         protected global::ClientDependency.Core.Controls.JsInclude JsIncludeGoogleChartsAPI;
         
         /// <summary>
-        /// JsIncludeChartTool control.
+        /// JsIncludeUCharts control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::ClientDependency.Core.Controls.JsInclude JsIncludeChartTool;
+        protected global::ClientDependency.Core.Controls.JsInclude JsIncludeUCharts;
         
         /// <summary>
         /// placeHolderChartTitle control.
