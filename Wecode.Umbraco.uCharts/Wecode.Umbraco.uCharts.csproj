@@ -83,7 +83,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ChartTool.ascx" />
-    <Content Include="chartTool.js" />
     <Content Include="chartToolMacro.js" />
     <Content Include="ChartToolTest.htm" />
     <Content Include="chart_bar.png" />

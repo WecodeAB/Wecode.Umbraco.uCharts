@@ -299,6 +299,8 @@
 
             if ($(chart.hiddenSettingsId).val() != null && $(chart.hiddenSettingsId).val() != "") {
                 chart.settings = $.parseJSON($(chart.hiddenSettingsId).val());
+            } else {
+                $(chart.hiddenSettingsId).val(JSON.stringify(chart.settings));
             }
 
             $(window).on("change", chart.chartSettingsClass, function(){uChartDataHandler.setOptions(this, chart)});
